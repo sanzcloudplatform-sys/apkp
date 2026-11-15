@@ -20,16 +20,16 @@ jobs:
 
       - name: Make gradlew executable
         run: |
-          cd android
+          cd szvora-qris-gateway/android
           chmod +x gradlew
 
       - name: Build Debug APK
         run: |
-          cd android
+          cd szvora-qris-gateway/android
           ./gradlew assembleDebug
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          path: szvora-qris-gateway/android/app/build/outputs/apk/debug/app-debug.apk
